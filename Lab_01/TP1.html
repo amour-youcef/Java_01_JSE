@@ -1,0 +1,106 @@
+<html>
+
+<head>
+<title>Exercices cours Java INSTA</title>
+</head>
+
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<p align="center"><b> - <font SIZE="+4">Fitec</font></b> </p>
+
+<hr align="center">
+
+<p align="center"><b><font SIZE="+3">Développement avec Java</font></b>&nbsp; </p>
+
+<hr align="center">
+
+<p align="center"><font SIZE="+2" COLOR="#FF0000"><b>Exercices</b></font> &nbsp; </p>
+<div align="center"><center>
+
+    <table BORDER="1">
+      <tr> 
+        <td ALIGN="CENTER" VALIGN="CENTER" WIDTH="200"><a HREF="#Exercice1">Exercice 
+          1 </a>&nbsp;</td>
+        <td ALIGN="CENTER" VALIGN="CENTER">Programmation objet 1</td>
+      </tr>
+    </table>
+</center></div>
+
+<hr align="center">
+
+<p align="center">&nbsp; </p>
+
+<table BORDER="2" BORDERCOLOR="#00ff00">
+  <tr>
+    <td WIDTH="583"><h1><a NAME="Exercice1" id="Exercice1"></a><b>Exercice 1</b></h1>
+    </td>
+  </tr>
+</table>
+
+<p><b>Points abordés : Bases du langage</b> 
+<ul>
+  <li><b>Manipulation d'une classe simple avec ses constructeurs,</b> </li>
+  <li><b>Méthode <i>main()</i> et récupération des arguments de la ligne de commande,</b> 
+  </li>
+  <li><b>Surcharge,</b> </li>
+  <li><b>this,</b> </li>
+  <li><b>Utilisation d'une classe wrapper,<i><a
+    HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Integer.html"> Integer</a></i></b> </li>
+</ul>
+
+<p><br>
+  1. Créer la classe <b>CVoiture</b> (dans le package <strong>com.formation.domaine</strong>) 
+  comportant les attributs suivants : 
+<ul>
+  <li><i>String m_strMarque (marque par défaut <strong>Renault</strong>)</i> </li>
+  <li><i>double m_fVitesseMax</i></li>
+  <li><i>double m_fPoidsTotal</i></li>
+  <li><i>double m_fPoidsChassis (poids par défaut <strong>120</strong>)</i> </li>
+  <li><i>int m_nPuissanceMoteur (puissance par défaut <strong>55</strong>)</i> </li>
+  <li><i>double m_fPoidsMoteur (poids par défaut <strong>100</strong>)</i> </li>
+</ul>
+
+<p>&nbsp;
+<p><br>
+  et définissant les méthodes publiques suivantes : 
+<ul>
+  <li>un constructeur prenant en argument la marque et la puissance de la voiture, </li>
+  <li>un constructeur par défaut (i.e. sans argument), </li>
+  <li>un constructeur prenant autant d'arguments que nécessaire et suffisant pour initialiser
+    tous les attributs de CVoiture, </li>
+  <li><i>afficher()</i> qui affiche tous les attributs. </li>
+</ul>
+
+<p>&nbsp;
+<p>Définir aussi les méthodes <strong>privées</strong> suivantes : 
+<ul>
+  <li><i>calculerPoidsTotal()&nbsp;</i> qui met à jour le poids total de la voiture : <i>m_fPoidsTotal
+    = m_fPoidsMoteur + m_fPoidsChassis</i></li>
+</ul>
+
+<ul>
+  <li>c<i>alculerVitesseMax()&nbsp;</i> qui met à jour la vitesse de la voiture :&nbsp; <i>m_fVitesseMax
+    = m_fPoidsTotal * m_nPuissanceMoteur / 500</i> </li>
+</ul>
+
+<p><br>
+  2. Créer une classe <strong>CMain</strong> (dans le fichier <strong>com.formation.test</strong>)comportant 
+  le point d'entrée <i>main() </i>. </p>
+
+<p> Dans la fonction main() créer une instance de la classe CVoiture et l'afficher.</p>
+
+<p>On veut pouvoir saisir sur la ligne de commande la marque et la puissance de 
+  la voiture. Tester si 2 arguments sont passés sur la ligne de commande</p>
+<ul>
+  <li>si oui, les passer au constructeur </li>
+  <li>si non, utiliser par défaut &quot;Renault&quot; pour la marque et 55 pour 
+    la puissance <br>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<hr>
+
+
+<hr>
+</body>
+</html>
