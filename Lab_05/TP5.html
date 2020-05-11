@@ -35,7 +35,11 @@
         <td ALIGN="CENTER" VALIGN="CENTER"><a HREF="#Exercice4">Exercice 4</a></td>
         <td ALIGN="CENTER" VALIGN="CENTER">Le typage dynamique</td>
       </tr>
-    </table>
+      <tr> 
+        <td ALIGN="CENTER" VALIGN="CENTER"><a HREF="#Exercice5">Exercice 5</a></td>
+        <td ALIGN="CENTER" VALIGN="CENTER" WIDTH="200">UTIL</td>
+      </tr>
+     </table>
 </center></div>
 
 <hr align="center">
@@ -271,6 +275,46 @@ Classes <strong>CChassis et CMoteur</strong>(dans le package <strong>com.formati
 <p>&nbsp;</p>
 <hr>
 
+<table BORDER="2" BORDERCOLOR="#00ff00">
+  <tr>
+    <td WIDTH="636"><h1><a NAME="Exercice5" id="Exercice5"></a><b>Exercice 5</b></h1>
+    </td>
+  </tr>
+</table>
+
+<p><b><u>Points abordés : Classes de base de type Container</u></b> </p>
+
+<p><b>Utilisation des containers <i>ArrayList</i> et <i>Hashtable</i> et de l'interfaces 
+  <em>Iterator</em></b></p>
+
+<h2><b><u>Etape 1 :</u></b> </h2>
+
+<p>Dans la méthode <i>main()</i> de <i>CMain</i> remplacer le tableau par un container <i><a
+HREF="../jdk1.3/docs/api/java/util/Vector.html">ArrayList</a></i> </p>
+
+<p>Utiliser dans la boucle un index et une méthode de <i><a
+HREF="http://docs.oracle.com/javase/1.4.2/docs/api/java/util/ArrayList.html">ArrayList</a></i> pour obtenir l'instance du
+véhicule afin d'appeler <i>rouler()</i>. </p>
+
+<h2><b><u>Etape 2 :</u></b> </h2>
+
+<p>Au lieu de parcourir le container à l'aide d'un index, utilisez un itérateur <i><a
+HREF="../jdk1.3/docs/api/java/util/Enumeration.html">Iterator</a></i> </p>
+
+<h2><b><u>Etape 3 :</u></b></h2>
+
+<p>Créer une <i><a HREF="../jdk1.3/docs/api/java/util/Hashtable.html">Hashtable</a></i> <i>hVehicule
+</i>pour &quot;mapper&quot; les véhicules avec des <i><a
+HREF="../jdk1.3/docs/api/java/lang/String.html">String</a></i>s définissant la marque du
+véhicule (par souci de simplification, on considèrera qu'à une marque donnée ne peut
+être associée qu'un seul véhicule à la fois) </p>
+
+<p>Insérer dans cette table chaque instance de <i>CVehicule </i>précédemment créée. </p>
+
+<p>Retrouver dans cette table le véhicule &quot;Iveco&quot;, et lui envoyer le message <i>afficher</i>().
+</p>
+
+<hr>
 
 </body>
 </html>
