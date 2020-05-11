@@ -55,7 +55,7 @@ public abstract class CVehicule {
    
 	protected abstract void calculerVitesseMax();
 	
-	protected abstract void rouler();
+	protected abstract void rouler() throws BasseVitesseException, GrandeVitesseException;
 
 	public String getM_strMarque() {
 		return m_strMarque;

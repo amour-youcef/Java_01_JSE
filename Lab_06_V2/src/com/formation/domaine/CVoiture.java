@@ -2,7 +2,7 @@ package com.formation.domaine;
 
 public class CVoiture extends CVehicule {
 
-	// Donnï¿½es Membres
+	// Données Membres
 	private static int m_nNbreVoiture = 0;
 
 	// Constructeurs
@@ -23,7 +23,7 @@ public class CVoiture extends CVehicule {
 	}
 
 	protected void calculerVitesseMax() {
-		m_fVitesseMax = m_fPoidsTotal * m_Moteur.getM_nPuissanceMoteur() / 500;
+		m_fVitesseMax = m_fPoidsTotal * m_Moteur.getM_fPoidsMoteur() / 500;
 	}
 
 	// Fonctions Membres
@@ -32,17 +32,11 @@ public class CVoiture extends CVehicule {
 		System.out.println("Nombre de voitures: " + m_nNbreVoiture);
 	}
 
-	public void rouler() {
-		try {
+	public void rouler() throws BasseVitesseException, GrandeVitesseException {
 			if (m_fVitesseMax < 50)
 				throw new BasseVitesseException(m_fVitesseMax, this);
 			if (m_fVitesseMax > 120)
 				throw new GrandeVitesseException(m_fVitesseMax, this);
-			System.out.println("Ca roule pour la voiture de marque "
-					+ m_strMarque + " !");
-		} catch (VitesseException e) {
-			System.out.println(e.toString());
-		}
 	}
 
 	@Override
