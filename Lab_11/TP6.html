@@ -1,0 +1,397 @@
+<html>
+
+<head>
+<title>Exercices cours Java INSTA</title>
+</head>
+
+<body TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<p align="center"><b> - <font SIZE="+4">INSTA</font></b> </p>
+
+<hr align="center">
+
+<p align="center"><b><font SIZE="+3">Développement avec Java</font></b>&nbsp; </p>
+
+<hr align="center">
+
+<p align="center"><font SIZE="+2" COLOR="#FF0000"><b>Exercices</b></font> &nbsp; </p>
+<div align="center"><center>
+
+    <table BORDER="1">
+      <tr> 
+        <td ALIGN="CENTER" VALIGN="CENTER" WIDTH="200"><a HREF="#Exercice1">Exercice 
+          1 </a>&nbsp;</td>
+        <td ALIGN="CENTER" VALIGN="CENTER">Programmation objet 1</td>
+      </tr>
+      <tr> 
+        <td ALIGN="CENTER" VALIGN="CENTER"><a HREF="#Exercice2">Exercice 2</a>&nbsp;</td>
+        <td ALIGN="CENTER" VALIGN="CENTER">Programmation objet 2</td>
+      </tr>
+      <tr> 
+        <td ALIGN="CENTER" VALIGN="CENTER"><a HREF="#Exercice3">Exercice 3</a>&nbsp;</td>
+        <td ALIGN="CENTER" VALIGN="CENTER">L'h&eacute;ritage</td>
+      </tr>
+      <tr> 
+        <td ALIGN="CENTER" VALIGN="CENTER"><a HREF="#Exercice4">Exercice 4</a></td>
+        <td ALIGN="CENTER" VALIGN="CENTER">Le typage dynamique</td>
+      </tr>
+      <tr> 
+        <td ALIGN="CENTER" VALIGN="CENTER"><a HREF="#Exercice5">Exercice 5</a></td>
+        <td ALIGN="CENTER" VALIGN="CENTER" WIDTH="200">UTIL</td>
+      </tr>
+      <tr> 
+        <td ALIGN="CENTER" VALIGN="CENTER"><a HREF="#Exercice6">Exercice 6</a></td>
+        <td ALIGN="CENTER" VALIGN="CENTER" WIDTH="200">Les Exceptions</td>
+      </tr>
+    </table>
+</center></div>
+
+<hr align="center">
+
+<p align="center">&nbsp; </p>
+
+<table BORDER="2" BORDERCOLOR="#00ff00">
+  <tr>
+    <td WIDTH="583"><h1><a NAME="Exercice1" id="Exercice1"></a><b>Exercice 1</b></h1>
+    </td>
+  </tr>
+</table>
+
+<p><b>Points abordés : Bases du langage</b> 
+<ul>
+  <li><b>Manipulation d'une classe simple avec ses constructeurs,</b> </li>
+  <li><b>Méthode <i>main()</i> et récupération des arguments de la ligne de commande,</b> 
+  </li>
+  <li><b>Surcharge,</b> </li>
+  <li><b>this,</b> </li>
+  <li><b>Utilisation d'une classe wrapper,<i><a
+    HREF="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/Integer.html"> Integer</a></i></b> </li>
+</ul>
+
+<p><br>
+  1. Créer la classe <b>CVoiture</b> (dans le package <strong>com.formation.domaine</strong>) 
+  comportant les attributs suivants : 
+<ul>
+  <li><i>String m_strMarque (marque par défaut <strong>Renault</strong>)</i> </li>
+  <li><i>double m_fVitesseMax</i></li>
+  <li><i>double m_fPoidsTotal</i></li>
+  <li><i>double m_fPoidsChassis (poids par défaut <strong>120</strong>)</i> </li>
+  <li><i>int m_nPuissanceMoteur (puissance par défaut <strong>55</strong>)</i> </li>
+  <li><i>double m_fPoidsMoteur (poids par défaut <strong>100</strong>)</i> </li>
+</ul>
+
+<p>&nbsp;
+<p><br>
+  et définissant les méthodes publiques suivantes : 
+<ul>
+  <li>un constructeur prenant en argument la marque et la puissance de la voiture, </li>
+  <li>un constructeur par défaut (i.e. sans argument), </li>
+  <li>un constructeur prenant autant d'arguments que nécessaire et suffisant pour initialiser
+    tous les attributs de CVoiture, </li>
+  <li><i>afficher()</i> qui affiche tous les attributs. </li>
+</ul>
+
+<p>&nbsp;
+<p>Définir aussi les méthodes <strong>privées</strong> suivantes : 
+<ul>
+  <li><i>calculerPoidsTotal()&nbsp;</i> qui met à jour le poids total de la voiture : <i>m_fPoidsTotal
+    = m_fPoidsMoteur + m_fPoidsChassis</i></li>
+</ul>
+
+<ul>
+  <li>c<i>alculerVitesseMax()&nbsp;</i> qui met à jour la vitesse de la voiture :&nbsp; <i>m_fVitesseMax
+    = m_fPoidsTotal * m_nPuissanceMoteur / 500</i> </li>
+</ul>
+
+<p><br>
+  2. Créer une classe <strong>CMain</strong> (dans le fichier <strong>com.formation.test</strong>)comportant 
+  le point d'entrée <i>main() </i>. </p>
+
+<p> Dans la fonction main() créer une instance de la classe CVoiture et l'afficher.</p>
+
+<p>On veut pouvoir saisir sur la ligne de commande la marque et la puissance de 
+  la voiture. Tester si 2 arguments sont passés sur la ligne de commande</p>
+<ul>
+  <li>si oui, les passer au constructeur </li>
+  <li>si non, utiliser par défaut &quot;Renault&quot; pour la marque et 55 pour 
+    la puissance <br>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<hr>
+
+<table BORDER="2" BORDERCOLOR="#00ff00">
+  <tr>
+    <td WIDTH="576"><h1><a NAME="Exercice2" id="Exercice2"></a><b>Exercice 2</b></h1>
+    </td>
+  </tr>
+</table>
+
+<p><b>Points abordés : Programmation objet</b><strong>, classes et r&eacute;f&eacute;rences</strong>
+<ul>
+  <li><b>Evolution de l'application</b> </li>
+  <li><b>Composition</b> </li>
+  <li><b>M&eacute;thodes d'acc&egrave;s</b> </li>
+</ul>
+
+<h2>&nbsp;</h2>
+
+<p>Une voiture est en réalité une composition d'autres objets plus ou moins complexes
+comme un chassis et un moteur.</p>
+
+<p>Reprendre le code de l'exercice 1 et ajouter 2 nouvelles classes :</p>
+<p>&nbsp;</p>
+Classes <strong>CChassis et CMoteur</strong>(dans le package <strong>com.formation.domaine</strong>) 
+
+<ul>
+  <li>Implémenter la classe <i>CChassis</i> avec les attributs:  <i>private double m_fPoidsChassis</i></li>
+  <li>Implémenter la classe <i>CMoteur</i>  avec les attributs: <i>private int m_nPuissanceMoteur</i> <i>private double m_fPoidsMoteur</i></li>
+  <li>Ecrire les constructeurs associés à ces classes. </li>
+  <li>Ecrire la méthode public <i>afficher()</i> dans ces deux classes pour afficher les attributs. </li>
+  <li>Ecrire les méthodes d'accès public g<i>etPoids()</i> et g<i>etPuissance()</i> dans <i>CMoteur</i>.
+  </li>
+  <li>Ecrire la méthode d'accès public g<i>etPoids()</i> dans <i>CChassis</i>. </li>
+</ul>
+
+<h3>Classe CVoiture</h3>
+
+<ul>
+  <li>Dans la classe <i>CVoiture</i> enlever les attributs concernant le moteur 
+    et le chassis. </li>
+  <li>Dans <i>CVoiture</i> ajouter deux attributs qui sont des références sur 
+    le moteur et le chassis: <i>CChassis m_Chassis</i> <i> et CMoteur m_Moteur</i> 
+  </li>
+  <li>Dans les constructeurs de <i>CVoiture</i> créer une instance de <i>CMoteur</i> 
+    et de <i>CChassis,</i> Modifier la méthode a<i>fficher()</i> de CVoiture pour 
+    appeler a<i>fficher()</i> de <i>CMoteur</i> et <i>CChassis</i>. </li>
+  <li>Modifier les méthodes c<i>alculerPoids()</i> et c<i>alculerVitesseMax().</i> 
+  </li>
+</ul>
+
+<p>Relancer le programme.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<hr>
+<table BORDER="2" BORDERCOLOR="#00ff00">
+  <tr> 
+    <td WIDTH="576"><h1><a NAME="Exercice3" id="Exercice3"></a><b>Exercice 3</b></h1></td>
+  </tr>
+</table>
+<p><strong>Points abord&eacute;s : Programmation objet , l'h&eacute;ritage</strong></p>
+<ul>
+  <li><strong>&eacute;volution de l'application</strong></li>
+  <li><strong>l'h&eacute;ritage</strong></li>
+  <li><strong>la red&eacute;finition</strong></li>
+</ul>
+<h2><b></b></h2>
+
+<p>On se propose d'implémenter le diagramme UML suivant:<br>
+<img SRC="images/umlvehic.gif" HEIGHT="513" WIDTH="592"> </p>
+
+<h3>Classe CVehicule</h3>
+
+<ul>
+  <li>Ecrire une classe générique <i>CVehicule</i> abstraite (<i>abstract</i>) qui reprend
+    tous les attributs(acces protected) de <i>CVoiture</i>. </li>
+  <li>Ecrire les constructeurs de <i>CVehicule.</i> <br>
+   		- Un constructeur par d&eacute;faut qui appel le constructeur à 2 arguments avec Renault comme Marque et 55 comme Puissance Moteur <br>
+   		- Un constructeur à 2 arguments qui appel le constructeur à 4 arguments avec 120 comme PoidsChassis et 100 comme Poids Moteur <br>
+   		- Un constructeur à 4 arguments suffisant pour initialiser tous les attributs de CVehicule <br>
+   </li>
+  <li>Ecrire dans la classe <i>CVehicule</i> les méthodes public: <i>getMarque()</i> <i>getVitesseMax()</i>
+    <i>getPoidsTotal()</i> </li>
+  <li>Déplacer les méthodes <i>afficher()</i> et [protected] <i>calculerPoidsTotal() </i>de <i>CVoiture</i>
+    dans <i>CVehicule</i>. </li>
+</ul>
+
+<h3>Classe CVoiture</h3>
+
+<ul>
+  <li>La classe <i>CVoiture</i> doit hériter de <i>CVehicule.</i> </li>
+   <li>Ecrire les constructeurs de <i>CVoiture.</i> <br>
+   		- Un constructeur par d&eacute;faut qui appel le constructeur à 2 arguments avec Renault comme Marque et 55 comme Puissance Moteur <br>
+   		- Un constructeur à 2 arguments qui appel le constructeur à 4 arguments avec 120 comme PoidsChassis et 100 comme Poids Moteur <br>
+   		- Un constructeur à 4 arguments qui appel le constructeur à 4 arguments de CVehicule <br>
+   </li>
+  <li>Redéfinir la méthode <i>afficher()</i> de <i>CVoiture</i>. Cette méthode appellera <i>afficher</i>()
+    de <i>CVehicule</i>. </li>
+  <li>Définir la méthode <i>rouler()</i> de <i>CVoiture</i>. Cette méthode affichera un
+    message de la forme &quot;Ca roule pour la voiture de marque ...&quot;.</li>
+  <li>Ajouter dans la classe <i>CVoiture</i> l'attribut: <i>static int m_nNbreVoiture = 0</i> </li>
+  <li>Incrémenter la variable <i>m_nNbreVoiture </i>dans le constructeur de <i>CVoiture</i>. </li>
+  <li>Dans la méthode <i>afficher()</i> de <i>CVoiture</i> afficher tous les attributs de <i>CVehicule</i>
+    et le nombre de voitures instanciées </li>
+  <li>Redéfinir la méthode <i>finalize()</i> pour décrémenter la variable <i>m_nNbreVoiture.</i>
+  </li>
+</ul>
+
+<h3>Classe CCamion</h3>
+
+<ul>
+  <li>Créer la classe <i>CCamion</i> dans le fichier CCamion.java, par copie du fichier
+    CVoiture.java puis substitution. </li>
+  <li>La classe <i>CCamion</i> comportera des méthodes <i>calculerVitesseMax()</i> et <i>rouler()
+    </i>différentes de celles de <i>CVoiture</i> (ces méthodes ne peuvent donc être mises
+    en facteur dans la classe <i>CVehicule)</i>. </li>
+  <li>Définir la méthode <i>rouler()</i> de <i>CCamion</i>. Cette méthode affichera un
+    message de la forme &quot;Ca roule pour le camion de marque ...&quot;.</li>
+  <li>Définir la méthode <i>calculerVitesseMax()</i> de <i>CCamion</i>. <br>
+      - La formule pour un camion est m_fVitesseMax = m_fPoidsTotal * m_nPuissanceMoteur / 700.</li>
+  <li><i>CCamion</i> est d'autre part équivalente à <i>CVoiture;</i> seul l'attribut
+    statique : <i>m_nNbreCamion et la marque ("Iveco") par défaut sont différents.</i> </li>
+</ul>
+
+<h3>Classe CMain</h3>
+
+<ul>
+  <li>Dans la classe <i>CMain</i> créer aussi une instance de <i>CCamion </i>(de marque
+    Iveco). </li>
+  <li>Relancer le programme.</li>
+</ul>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr>
+<table BORDER="2" BORDERCOLOR="#00ff00">
+  <tr> 
+    <td WIDTH="576"><h1><a NAME="Exercice4" id="Exercice4"></a><b>Exercice 4</b></h1></td>
+  </tr>
+</table>
+<p><strong>Points abord&eacute;s : </strong></p>
+<ul>
+  <li><strong>classe abstraite</strong></li>
+  <li><strong>typage dynamique</strong></li>
+</ul>
+<h2>&nbsp;</h2>
+
+<ul>
+  <li>Dans la méthode <i>main()</i> de <i>CMain</i>: </li>
+  <li>Créer un tableau <i>listeVehicule</i> de 5 références sur CVehicule : </li>
+  <li>le premier élément du tableau doit référencer une instance de <i>CVoiture("Peugeot", 100)</i> </li>
+  <li>le deuxième élément du tableau doit référencer une instance de <i>CCamion("Iveco", 200)</i> </li>
+  <li>Ecrire une boucle qui parcourt le tableau pour appeler la méthode <i>rouler() </i>des
+    différentes instances. </li>
+  <li>Corriger l'erreur de compilation : <i>Method rouler() not found in CVehicule.</i> </li>
+  <li>Relancer le programme.</li>
+</ul>
+
+<p>&nbsp;</p>
+<hr>
+
+<table BORDER="2" BORDERCOLOR="#00ff00">
+  <tr>
+    <td WIDTH="636"><h1><a NAME="Exercice5" id="Exercice5"></a><b>Exercice 5</b></h1>
+    </td>
+  </tr>
+</table>
+
+<p><b><u>Points abordés : Classes de base de type Container</u></b> </p>
+
+<p><b>Utilisation des containers <i>ArrayList</i> et <i>Hashtable</i> et de l'interfaces 
+  <em>Iterator</em></b></p>
+
+<h2><b><u>Etape 1 :</u></b> </h2>
+
+<p>Dans la méthode <i>main()</i> de <i>CMain</i> remplacer le tableau par un container <i><a
+HREF="../jdk1.3/docs/api/java/util/Vector.html">ArrayList</a></i> </p>
+
+<p>Utiliser dans la boucle un index et une méthode de <i><a
+HREF="http://docs.oracle.com/javase/1.4.2/docs/api/java/util/ArrayList.html">ArrayList</a></i> pour obtenir l'instance du
+véhicule afin d'appeler <i>rouler()</i>. </p>
+
+<h2><b><u>Etape 2 :</u></b> </h2>
+
+<p>Au lieu de parcourir le container à l'aide d'un index, utilisez un itérateur <i><a
+HREF="../jdk1.3/docs/api/java/util/Enumeration.html">Iterator</a></i> </p>
+
+<h2><b><u>Etape 3 :</u></b></h2>
+
+<p>Créer une <i><a HREF="../jdk1.3/docs/api/java/util/Hashtable.html">Hashtable</a></i> <i>hVehicule
+</i>pour &quot;mapper&quot; les véhicules avec des <i><a
+HREF="../jdk1.3/docs/api/java/lang/String.html">String</a></i>s définissant la marque du
+véhicule (par souci de simplification, on considèrera qu'à une marque donnée ne peut
+être associée qu'un seul véhicule à la fois) </p>
+
+<p>Insérer dans cette table chaque instance de <i>CVehicule </i>précédemment créée. </p>
+
+<p>Retrouver dans cette table le véhicule &quot;Iveco&quot;, et lui envoyer le message <i>afficher</i>().
+</p>
+
+<hr>
+
+<table BORDER="2" BORDERCOLOR="#00ff00">
+  <tr>
+    <td WIDTH="567"><h1><a NAME="Exercice6" id="Exercice6"></a><b>Exercice 6</b></h1>
+    </td>
+  </tr>
+</table>
+
+<p><b>Points abordés : Traitement des Exceptions</b> 
+
+<ul>
+  <li><b>Créer sa propre classe de gestion d'exception et gérer l'exception</b> <b>try,
+    catch, throw, finally, <i><a HREF="../jdk1.3/docs/api/java/lang/Exception.html">Exception</a></i></b>
+  </li>
+  <li><b>Lancer, attraper et gérer une exception</b> </li>
+</ul>
+
+<p>On souhaite rajouter une exception <i>VitesseException</i> qui sera levée si la
+vitesse d'un véhicule est trop basse ou trop grande. </p>
+
+<h2><b><u>Etape 1 : Exception traitée dans <i>rouler() </i>de <i>CVoiture</i></u></b> </h2>
+
+<h3><br>
+Classe VitesseException</h3>
+
+<p>Créer la classe publique <i>VitesseException</i> dans le fichier
+VitesseException.java. les attributs de cette classe sont : 
+
+<ul>
+  <li><i>m_fVitesse </i>: la vitesse du véhicule en faute. </li>
+  <li><i>m_vehicule </i>:&nbsp; le véhicule en faute. </li>
+</ul>
+
+<p>Définir un constructeur de <i>VitesseException</i> permettant d'initialiser les
+attributs de cette classe. </p>
+
+<p>Redéfinir la méthode <i>toString()</i> afin d'obtenir la vitesse et la marque du
+véhicule en faute. </p>
+
+<h3>&nbsp;</h3>
+<h3>Classes GrandeVitesseException et BasseVitesseException</h3>
+
+<p>Définir les 2 classes publiques d'exception <i>BasseVitesseException </i>et 
+  <i>GrandeVitesseException </i>qui héritent de <i>VitesseException </i>et redéfinissent 
+  la méthode <i>toString()</i>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h3>Classe CVoiture</h3>
+
+<p>Dans la méthode <i>rouler() </i>de <i>CVoiture</i></p>
+<ul>
+  <li> implémenter dans le <i>try</i> le contrôle de la vitesse</li>
+  <li> lever par <i>throw</i> une exception <i>BasseVitesseException </i>dans 
+    le cas où la vitesse maximale est &lt; 50 Km/h</li>
+  <li> lever par <i>throw</i> une exception <i>GrandeVitesseException </i>dans 
+    le cas où la vitesse maximale est &gt;120 Km/h</li>
+  <li> implémenter un bloc <i>catch</i> pour attraper ces exceptions et les afficher. 
+  </li>
+</ul>
+<h2><b><u>Etape 2 :Exception traitée dans <i>main() </i>de <i>CMain</i></u></b> </h2>
+
+<p><br>
+La méthode <i>rouler() </i>de <i>CVoiture </i>n'implémente plus un bloc <i>catch</i>
+pour attraper les exceptions mais déclare dans son prototype les exceptions qu'elle lève
+mais ne traite pas. <br>
+Dans la méthode <i>main</i>() de la classe <i>CMain</i>, il faut donc placer l'appel de <i>rouler()</i>
+dans un bloc <i>try, </i>suivi d'un bloc <i>catch</i>. <br>
+Se contenter d'instancier une seule voiture dans la méthode <i>main</i>() de la classe <i>CMain
+</i>et lui envoyer le message <i>rouler</i>(). <br>
+Passer différents arguments sur la ligne de commande pour tester les différents cas. <br>
+</p>
+
+<hr>
+</body>
+</html>
