@@ -1,15 +1,14 @@
 package com.formation.domaine;
 
-public class CVoiture {
+public class CVoiture extends CVehicule {
 	
-    String m_strMarque;
-    double m_fVitesseMax;
-    double m_fPoidsTotal;
-    
-    CChassic m_Chassis;
-    CMoteur m_Moteur;
-
-
+	
+	//Donnees des Membres
+	
+	private static int m_nNbreVoiture = 0 ;
+	
+	// Constructeurs
+	
 	public CVoiture() {
 		this("Renault", 55);
 	}
@@ -23,50 +22,41 @@ public class CVoiture {
 
 
 
-	public CVoiture(String m_strMarque,	int m_nPuissanceMoteur,
-			        double m_fPoidsChassis, double m_fPoidsMoteur) {
+	public CVoiture(String strMarque,	int nPuissanceMoteur,
+			        double fPoidsChassis, double fPoidsMoteur) {
 		
-		this.m_strMarque = m_strMarque;
-		
-		this.m_Chassis = new CChassic(m_fPoidsChassis);
-		this.m_Moteur = new CMoteur(m_nPuissanceMoteur, m_fPoidsMoteur);
+		super(strMarque, nPuissanceMoteur, fPoidsChassis, fPoidsMoteur);
 		
 	    calculerPoidsTotal();
 	    calculerVitesseMax();
 	}
 
 
-
+	@Override
+	protected void calculerVitesseMax() {
+		// TODO Auto-generated method stub
+		m_fVitesseMax = m_fPoidsTotal * m_Moteur.getM_nPuissanceMoteur() / 500 ;
+	}
+	
+	//Fonctions Membres
 	public void afficher() {
+		super.afficher();
+		System.out.println("Nombre de voitures : " + m_nNbreVoiture);
+	}
+
+
+	@Override
+	protected void rouler() {
+		// TODO Auto-generated method stub
 		
-	    System.out.println(	"------------------------");
-	    System.out.println(	"Marque: " + m_strMarque);
-	    
-	    //infos moteur
-	    
-	    m_Moteur.affiche();
-	    
-	    //infos chassis
-	    
-	    m_Chassis.affiche();
-	    
-	    // infos calculees
-	    
-	    System.out.println();
-	    System.out.println(	"Infos Calculees");
-	    System.out.println(	"Poids Total : " + m_fPoidsTotal);
-	    System.out.println(	"Vitesse Max: " + m_fVitesseMax + "Km/h");
+		System.out.println("Ca roule pour la voiture de marque " + m_strMarque + "!");
+		
 	}
 
-	private void calculerPoidsTotal(){
-		m_fPoidsTotal = m_Moteur.getM_fPoidsMoteur() + m_Chassis.getM_fPoidsChassic();
+ 
+	protected void finalize() {
+		m_nNbreVoiture--;
 	}
-
-	private void calculerVitesseMax(){
-		m_fVitesseMax = m_fPoidsTotal * m_Moteur.getM_nPuissanceMoteur() / 500;
-	}
-
-
 
 
 }
